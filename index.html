@@ -2,38 +2,234 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Andy Smith</title>
-    <link rel="stylesheet" href="css/shrunk.css" type="text/css" charset="utf-8"/>
-</head>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<body>
+    <style>
+        /* layout */
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow:hidden;
+        }
+
+        html {
+            color: #4b4b4b;
+            font-family: bitterw, Serif;
+        }
+
+        body {
+            background: url(i/b.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        #page-wrap {
+            margin-left: auto;
+            margin-right: auto;
+            width: 420px;
+            margin-top: 50px;
+            background-color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, .8);
+            padding: 30px;
+        }
+
+        p {
+            margin: 20px 0 0 0;
+        }
+
+        h1 {
+            display: inline;
+        }
+
+        .email {
+            margin-bottom: 30px;
+        }
+
+        .pic {
+            vertical-align: top;
+            float: right;
+            margin-right: 10px;
+            width: 100px;
+        }
+
+        /* type */
+
+        h1 {
+            font-size: 36px;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .head {
+            float: left;
+            margin-bottom: 20px;
+        }
+
+        .email {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.5;
+            letter-spacing: .02em;
+            font-weight: normal;
+        }
+
+        a:link, a:visited {
+            text-decoration: none;
+            font-style: italic;
+            /*color: rgb(179, 67, 14);*/
+            color: rgb(95, 120, 137);
+        }
+
+        a:hover, a:active a:hover, a:active {
+            color: rgb(66, 86, 104);
+            background-color: rgb(175, 214, 235);
+            background-color: rgba(175, 214, 235, .7);
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /* fonts */
+
+        @font-face {
+            font-family: 'bitterw';
+            src: url('f/bitter-italic-webfont.eot');
+            src: url('f/bitter-italic-webfont.eot?#iefix') format('embedded-opentype'),
+            url('f/bitter-italic-webfont.svg#bitteritalic') format('svg'),
+            url('f/bitter-italic-webfont.woff') format('woff'),
+            url('f/bitter-italic-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'bitterw';
+            src: url('f/bitter-bolditalic-webfont.eot');
+            src: url('f/bitter-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+            url('f/bitter-bolditalic-webfont.woff') format('woff'),
+            url('f/bitter-bolditalic-webfont.ttf') format('truetype'),
+            url('f/bitter-bolditalic-webfont.svg#bitterbold_italic') format('svg');
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'bitterw';
+            src: url('f/bitter-bold-webfont.eot');
+            src: url('f/bitter-bold-webfont.eot?#iefix') format('embedded-opentype'),
+            url('f/bitter-bold-webfont.svg#bitterbold') format('svg') url('f/bitter-bold-webfont.woff') format('woff'),
+            url('f/bitter-bold-webfont.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'bitterw';
+            src: url('f/bitter-regular-webfont.eot');
+            src: url('f/bitter-regular-webfont.eot?#iefix') format('embedded-opentype'),
+            url('f/bitter-regular-webfont.woff') format('woff'),
+            url('f/bitter-regular-webfont.ttf') format('truetype'),
+            url('f/bitter-regular-webfont.svg#bitterregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @media screen and (max-width: 440px) {
+
+            h1 {
+                font-size: 24px;
+
+            }
+
+            .email {
+                font-size: 14px;
+                font-weight: normal;
+            }
+
+            #page-wrap {
+                margin-top: 0;
+                padding: 10px;
+                width: 80%;
+            }
+
+            .pic {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-height: 450px) {
+
+            html, body {
+                overflow:auto;
+            }
+
+            #page-wrap {
+                margin-top: 0;
+            }
+
+            h1 {
+                font-size: 24px;
+
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
 <div id="page-wrap">
     <div class="head">
-        <h1 class="first">Andy Smith</h1>
+        <h1>Andy Smith</h1>
 
-        <div class="first email"><a href="mailto:andy@ymkm.com">andy@ymkm.com</a></div>
+        <div class="email"><script>
+            <!--
+            document.write('<a href="mai');
+            document.write('lto');
+            document.write(':&#97;&#110;&#100;&#121;');
+            document.write('@');
+            document.write('&#121;&#109;&#107;&#109;&#46;&#99;&#111;&#109;">');
+            document.write('&#97;&#110;&#100;&#121;');
+            document.write('@');
+            document.write('&#121;&#109;&#107;&#109;&#46;&#99;&#111;&#109;<\/a>');
+            // -->
+        </script><noscript>&#97;&#110;&#100;&#121; at
+            &#121;&#109;&#107;&#109; dot &#99;&#111;&#109;</noscript></div>
     </div>
 
-    <p class="second">Technology leader specialising in architecture and product development for large-scale distributed
-        consumer sites &amp; apps.</p>
+    <img class="pic" src="i/andy-smith.jpg" alt="Andy Smith" width="100" height="100">
 
-    <p class="third">Formally BBC iPlayer &amp; MTV / Viacom. Most recently with Beamly - the social network for TV.</p>
+    <p class="clear">Technology leader specialising in architecture and product development for large-scale
+        distributed consumer sites &amp; apps.</p>
 
-    <p class="fourth">Find me on <a href="http://twitter.com/ymkm">Twitter</a>, <a
-            href="https://www.linkedin.com/in/andysmith">Linked In</a> and <a href="https://github.com/ymkm">GitHub</a>.
+    <p>Formerly BBC iPlayer &amp; MTV / Viacom. Most recently with Beamly - the social network for TV.</p>
+
+    <p>Find me on
+        <a href="http://twitter.com/ymkm">Twitter</a>,
+        <a href="https://www.linkedin.com/in/andysmith">Linked In</a> and
+        <a href="https://github.com/ymkm">GitHub</a>.
     </p>
 
 </div>
-
-</body>
 <script>
-
-    $('.first').addClass('animated flipInX');
-    $('.second').addClass('animated fadeIn');
-    $('.third').addClass('animated fadeIn');
-    $('.fourth').addClass('animated fadeIn');
-
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
@@ -50,4 +246,5 @@
     ga('send', 'pageview');
 
 </script>
+</body>
 </html>
