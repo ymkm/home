@@ -1,3 +1,4 @@
+Redirect 302 / https://pages.qwilr.com/Andy-Smith-Qwilr-gmEyB1rCS7mU
 
 <IfModule mod_headers.c>
     <FilesMatch "\.(eot|font.css|otf|ttc|ttf|woff)$">
